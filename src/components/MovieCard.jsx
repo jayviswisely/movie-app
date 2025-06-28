@@ -1,4 +1,5 @@
 import React from 'react'
+import { useDebounce } from 'react-use' 
 
 const MovieCard = ({ movie: 
   { title, vote_average, poster_path, release_date, original_language } }) => {
@@ -21,7 +22,7 @@ const MovieCard = ({ movie:
 
         <span>‧</span>
         <p className='year'>
-          {release_date ? release_date.split('-') : "N/A"}
+          {release_date ? release_date.split('-')[0] : "N/A"}
         </p>
       </div>
 
